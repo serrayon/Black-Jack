@@ -6,3 +6,15 @@
     display: flex;
     justify-content: space-around
 }
+
+button{
+    margin: 20px;
+}
+
+#player{
+    margin:10px;
+}
+
+#dealer{
+    margin:10px;
+}
