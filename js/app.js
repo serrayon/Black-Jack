@@ -100,8 +100,8 @@ function gameRules() {
         console.log(`Dealer WON!`);
     }
     else if(dealer.handValue()=== player1.handValue()){
-        document.getElementById('message').innerHTML ="Game tide"
-        console.log("Game tide");
+        document.getElementById('message').innerHTML ="Game tied"
+        console.log("Game tied");
     }
     // }   else if(dealer.handValue() === 17) {
     //     //(dealerstands) 
