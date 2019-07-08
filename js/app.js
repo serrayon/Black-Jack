@@ -110,43 +110,9 @@ function gameRules() {
  }
 
 
-//------------event listeners--------//
+//---------Event Listeners-------//
 
-// for start game on the first page
-// deck = new Deck();
-// player1 = new Player();
-// dealer = new Player();
-// start();
-// function start()
-// {
-    
-        
-//     deck.shuffle();
-//     player1.pushCard(deck);
-//     player1.pushCard(deck);
-//     dealer.pushCard(deck);
 
-//     this.print();
-
-// }
-
-// f
-// one for hit
-// function hit()
-// {
-//     player1.pushCard(deck);
-//     this.gameRules(); 
-//     this.print();
-// }
-// //one for stand
-// function stand()
-// {
-//     console.log("In stand ",dealer.handValue());
-//     while(dealer.handValue()<17)
-//     {
-//         dealer.pushCard(deck);
-//     }
-//     this.print();
-//     this.gameRules();
-// }
-// //one for shuffle
+ deck = new Deck();
+ player1 = new Player();
+ dealer = new Player();

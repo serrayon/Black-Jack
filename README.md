@@ -1,2 +1,2 @@
-# Black-Jack
-card game
+Black jack
+Card Game
