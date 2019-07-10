@@ -10,14 +10,29 @@
 </head>
 <body>
     <div class="user-buttons">
-    <div id="message"></div>
     <form method="get" action="index.html">
-    <div type="button" onclick="hit();">Hit</div>
-    <div type="button" onclick="stand();">Stand</div>
-    <button class="first" type="submit">Main Page</button></form>
-    
+    <button type="submit">Main Page</button></form>
     
     </div>
+
+    <div id="message"></div>
+
+    <div>
+        <div id="player"></div>
+
+        <div id="dealer"></div>
+    </div>
+
+
+    <button type="button" onclick="hit();" >Hit</button>
+    <button type="button" onclick="stand();" >Stand</button>
+    <button class="reset" onclick="myButton()">Reset</button>
+
+    <div>
+            <div id="player-score"></div>
+    
+            <div id="dealer-score"></div>
+        </div>
 <!-- Main JS -->
 <script src="./js/app.js"></script>
 </body>

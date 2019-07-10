@@ -42,9 +42,6 @@ shuffle() {
     return this.cards.pop();
  }
 }; 
-
-
-
 class Player {
     constructor() {
         this.hand = [];
@@ -61,58 +58,91 @@ class Player {
             } else if (card.value === "K"){
                 total +=10
             } 
-            else if(card.value === "A"){
+            else if(card.value === "A" ){
                 total += 11;
             }
             else{
                 total += card.value
             }
-            console.log("Total Value in loop : "+total);
+            
         });
-        console.log("Length of Card : "+total,this.hand.length);
+        
         return total;
     }
 
     pushCard(obj){
         this.hand.push(obj.deal());
     }
+    
 };
 
-
-
-
 function gameRules() {
-    console.log("In game rule");
+    
     if(player1.handValue() > 21) {
         console.log(`Player one BUSTED you lose!`)
-        document.getElementById('message').innerHTML ="Player one BUSTED you lose!"
+        document.getElementById('message').innerHTML =("Player one BUSTED you lose!")
     }   else if(player1.handValue() === 21) {
-        document.getElementById('message').innerHTML ="Player one WON!"
+        document.getElementById('message').innerHTML =("Player one WON!")
         console.log(`Player one WON!`);
-    }   else if(player1.handValue() < 21 && player1.handValue() > dealer.handValue()) {
-        document.getElementById('message').innerHTML ="Player one WON!"
-        console.log(`Player one WON!`); 
+    // }   else if(player1.handValue() < 21 && player1.handValue() > dealer.handValue()) {
+    //     document.getElementById('message').innerHTML =("Player one WON!")
+    //     console.log(`Player one WON!`); 
     }   else if (dealer.handValue() > 21) {
-        document.getElementById('message').innerHTML ="Dealer BUSTED!"
+        document.getElementById('message').innerHTML =("Dealer BUSTED!")
         console.log(`Dealer BUSTED!`) 
     }   else if(dealer.handValue() < 21 && dealer.handValue() > player1.handValue()) {
-        document.getElementById('message').innerHTML ="Dealer WON!"
+        document.getElementById('message').innerHTML =("Dealer WON!")
         console.log(`Dealer WON!`);
     }
     else if(dealer.handValue()=== player1.handValue()){
-        document.getElementById('message').innerHTML ="Game tied"
+        document.getElementById('message').innerHTML =("Game tied")
         console.log("Game tied");
     }
-    // }   else if(dealer.handValue() === 17) {
-    //     //(dealerstands) 
-    // }   else if (dealer.handValue() < 16){}
-           // (dealer hits)
+    
  }
+//------------event listeners--------//
+// for start game on the first page
+deck = new Deck();
+player1 = new Player();
+dealer = new Player();
+start();
+function start()
+{
+        
+    deck.shuffle();
+    player1.pushCard(deck);
+    player1.pushCard(deck);
+    dealer.pushCard(deck);
 
+    this.handTotal();
 
-//---------Event Listeners-------//
+}
+function handTotal()
+{
+    
+    document.getElementById('player').innerHTML="Player Cards : "+JSON.stringify(player1.hand);
+    document.getElementById('dealer').innerHTML="Dealer Cards : "+JSON.stringify(dealer.hand);
+    document.getElementById('player-score').innerHTML="Player Score : "+player1.handValue();
+    document.getElementById('dealer-score').innerHTML="Dealer Score : "+dealer.handValue();
 
+}
+function hit()
+{
+    player1.pushCard(deck);
+    this.gameRules(); 
+    this.handTotal();
+}
+function stand()
+{
+    
+    while(dealer.handValue()<17)
+    {
+        dealer.pushCard(deck);
+    }
+    this.handTotal();
+    this.gameRules();
+}
 
- deck = new Deck();
- player1 = new Player();
- dealer = new Player();
+function myButton() {
+	location.reload();
+};
