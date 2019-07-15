@@ -58,7 +58,7 @@ class Player {
             } else if (card.value === "K"){
                 total +=10
             } 
-            else if(card.value === "A" ){
+            else if(card.value === "A"){
                 total += 11;
             }
             else{
@@ -70,8 +70,8 @@ class Player {
         return total;
     }
 
-    pushCard(obj){
-        this.hand.push(obj.deal());
+    pushCard(arr){
+        this.hand.push(arr.deal());
     }
     
 };
@@ -84,9 +84,9 @@ function gameRules() {
     }   else if(player1.handValue() === 21) {
         document.getElementById('message').innerHTML =("Player one WON!")
         console.log(`Player one WON!`);
-    // }   else if(player1.handValue() < 21 && player1.handValue() > dealer.handValue()) {
-    //     document.getElementById('message').innerHTML =("Player one WON!")
-    //     console.log(`Player one WON!`); 
+    }   else if(player1.handValue() < 21 && player1.handValue() > dealer.handValue()) {
+        document.getElementById('message').innerHTML =("Player one WON!")
+        console.log(`Player one WON!`); 
     }   else if (dealer.handValue() > 21) {
         document.getElementById('message').innerHTML =("Dealer BUSTED!")
         console.log(`Dealer BUSTED!`) 
@@ -108,18 +108,16 @@ dealer = new Player();
 start();
 function start()
 {
-        
     deck.shuffle();
     player1.pushCard(deck);
     player1.pushCard(deck);
     dealer.pushCard(deck);
 
     this.handTotal();
-
 }
 function handTotal()
+
 {
-    
     document.getElementById('player').innerHTML="Player Cards : "+JSON.stringify(player1.hand);
     document.getElementById('dealer').innerHTML="Dealer Cards : "+JSON.stringify(dealer.hand);
     document.getElementById('player-score').innerHTML="Player Score : "+player1.handValue();
