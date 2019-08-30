@@ -10,6 +10,9 @@
 .cards {
   display: flex;
   justify-content: center;
+  text-decoration: none;
+  color: black;
+  padding-left: 16em;
   /* margin: auto; */
 }
 /* .hand {
