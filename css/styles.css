@@ -14,7 +14,21 @@ body {
 
 .user-buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+    flex-direction: row; /* Align the buttons in a row */
+    margin-top: 10px; /* Adjust this value as needed */
+}
+
+.hit-button, .stand-button, .reset-button {
+    font-size: 16px; /* Adjust the size as needed */
+    padding: 10px; /* Adjust the padding as needed */
+    margin: 5px; /* Adjust the margin as needed */
+}
+.lower {
+    font-size: 16px; /* Adjust the size as needed */
+    padding: 10px; /* Adjust the padding as needed */
+    margin: 5px; /* Add margin to separate the buttons */
 }
 
 .main-container {
@@ -31,10 +45,6 @@ body {
     font-family: 'Alegreya Sans SC';
     margin: 0;
     padding: 0;
-    /* Add margin-top or padding-top to adjust the vertical spacing as needed */
-    margin-top: 5px; /* Adjust this value as needed */
-    
-   
 }
 
 h1 {
@@ -53,10 +63,6 @@ h1 {
     text-align: center;
 }
 
-.hit-button, .stand-button, .reset-button {
-    font-size: 16px; /* Adjust the size as needed */
-    padding: 5px; /* Adjust the padding as needed */
-}
 button {
     margin: 20px;
 }
