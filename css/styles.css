@@ -28,36 +28,35 @@ body {
 .game-title {
     font-size: 10vh;
     text-align: center;
-    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'Alegreya Sans SC';
     margin: 0;
     padding: 0;
     /* Add margin-top or padding-top to adjust the vertical spacing as needed */
-    margin-top: 10px; /* Adjust this value as needed */
+    margin-top: 5px; /* Adjust this value as needed */
+    
+   
 }
-
-
 
 h1 {
     font-size: 10vh;
     text-align: center;
-    font-family: 'Alegreya Sans SC', sans-serif;
+    font-family: 'Alegreya Sans SC';
     margin: 0;
     padding: 0;
 }
 
-h2, .one, .two, #player, #dealer {
-    font-size: 4vh;
-    font-family: 'Julius Sans One', sans-serif;
+#player, #dealer {
+    font-size: 9vh;
+    font-family: 'Julius Sans One';
     font-weight: bold;
     padding: 15px; 
     text-align: center;
 }
 
-.two {
-    font-size: 3.5vh;
-    margin: 10px;
+.hit-button, .stand-button, .reset-button {
+    font-size: 16px; /* Adjust the size as needed */
+    padding: 5px; /* Adjust the padding as needed */
 }
-
 button {
     margin: 20px;
 }
