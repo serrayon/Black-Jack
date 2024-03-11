@@ -109,11 +109,15 @@ function start() {
     this.handTotal();
 }
 function handTotal() {
-    document.getElementById('player').innerHTML = "Player Cards : " + JSON.stringify(player1.hand);
-    document.getElementById('dealer').innerHTML = "Dealer Cards : " + JSON.stringify(dealer.hand);
+    document.getElementById('player').innerHTML = "Player Cards : "  + formatCards(player1.hand);
+    document.getElementById('dealer').innerHTML = "Dealer Cards : " + formatCards(dealer.hand);
     document.getElementById('player-score').innerHTML = "Player Score : " + player1.handValue();
     document.getElementById('dealer-score').innerHTML = "Dealer Score : " + dealer.handValue();
 
+}
+
+function formatCards(cards) {
+    return cards.map(card => `${card.value} of ${card.suit}`).join(', ');
 }
 function hit() {
     player1.pushCard(deck);
