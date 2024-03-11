@@ -44,8 +44,18 @@ button{
 
 #player{
     margin:10px;
+    font-size: 4vh;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    padding: 0 100px;
+    padding: 15px; 
 }
 
 #dealer{
     margin:10px;
+    font-size: 4vh;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    padding: 0 100px;
+    padding: 15
 }
